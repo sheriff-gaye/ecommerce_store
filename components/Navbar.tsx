@@ -1,11 +1,16 @@
+
 import Link from "next/link";
 
 import MainNav from "@/components/main-nav";
 import getCategories from "@/actions/get-categories";
 import Container from "./ui/Container";
 
+
+export const relavalidate=0;
+
 const Navbar = async () => {
   const categories = await getCategories();
+
 
   return ( 
     <div className="border-b">
