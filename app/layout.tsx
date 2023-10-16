@@ -1,10 +1,16 @@
 import { Urbanist } from 'next/font/google'
+require('dotenv').config()
 
 
 
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+
+
+
+
+
 
 const font = Urbanist({ subsets: ['latin'] })
 
@@ -19,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  console.log(process.env.NEXT_PUBLIC_API_URL)
+ 
 
   return (
     <html lang="en">
