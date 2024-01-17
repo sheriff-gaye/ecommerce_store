@@ -6,6 +6,8 @@ require('dotenv').config()
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import ModalProvider from '@/providers/modal-provider'
+import ToastProvider from '@/providers/toast-provider'
 
 
 
@@ -31,6 +33,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <Navbar />
+        <ModalProvider/>
+        <ToastProvider/>
         {children}
         <Footer />
       </body>
