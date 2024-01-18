@@ -10,6 +10,7 @@ import { MouseEventHandler } from "react";
 import usePreviewModal from "@/hooks/use-preview-modal";
 import useCart from "@/hooks/use-cart";
 
+
 interface ProductCardProps {
   data: Product;
 }
@@ -18,7 +19,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
 
     const router=useRouter();
     const previewModal=usePreviewModal();
-    const cart=useCart()
+    const cart=useCart();
 
     const handleClick=()=>{
 
@@ -34,7 +35,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
 
     const onAddToCart:MouseEventHandler<HTMLButtonElement>=(event)=>{
         event.stopPropagation();
-        cart.addItem(data);
+        cart.addItem(data)
 
     }
   return (
